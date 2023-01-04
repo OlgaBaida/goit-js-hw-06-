@@ -14,7 +14,7 @@ const images = [
 ];
 const list = document.querySelector('.gallery');
 const newEl = images.map(({ url, alt }) => {
-  const markup = ` <li><img class="image" src= ${url} alt= ${alt} width=400 /></li> `;
+  const markup = ` <li><img class="image" src= ${url} alt= ${alt} width=300 height=200 /></li> `;
   return markup;
 })
 .join("");
@@ -22,3 +22,4 @@ list.insertAdjacentHTML("beforeend", newEl);
 list.style.display = "flex";
 list.style.gap = "20px";
 list.style.listStyle = "none"
+console.log(newEl);
